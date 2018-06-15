@@ -9,7 +9,7 @@ namespace DataQuality1.Controllers
     public class EntityController : Controller
     {
         // GET: Entity
-        public ActionResult Index()
+        public ActionResult Result()
         {
             // get model from database
             return View();
