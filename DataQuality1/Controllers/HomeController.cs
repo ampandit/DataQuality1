@@ -42,5 +42,11 @@ namespace DataQuality1.Controllers
             }
             return View();
         }
+
+        public ActionResult Reviews()
+        {
+            ViewBag.Message = "Comments and reviews.";
+            return View();
+        }
     }
 }
