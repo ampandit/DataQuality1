@@ -2,8 +2,95 @@
 @{
     ViewBag.Title = "Reviews";
 }
+<link href="~/Content/Stars.css" rel="stylesheet" type="text/css" />
+<center><h3><b>Rating and Feedback</b></h3></center>
 
-<h2>Reviews</h2>
+<center><h4>Thank you for using our Data Sets / Tables, Please rate your experience.</h4></center>
+<br /><br />
+<p><b>Data Sets</b></p>
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Awesome - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Good - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="OK - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="OK - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Bad - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Terrible - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Terrible - 0.5 stars"></label>
+</fieldset><br /><br />
+<p><b>Content / Information</b></p>
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Awesome - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Good - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="OK - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="OK - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Bad - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Terrible - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Terrible - 0.5 stars"></label>
+</fieldset> <br /><br/>
+<p><b>Ease of Use</b></p>
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Awesome - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Good - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="OK - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="OK - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Bad - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Terrible - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Terrible - 0.5 stars"></label>
+</fieldset> <br />
+
+<div class="verticalLine">
+
+    Comment:
+
+
+    <!-- comment box code starts here -->
+    <!--
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:TextBox ID="txtshare" runat="server" MaxLength="50" Width="270px" TextMode="MultiLine"
+                             Placeholder="Enter a Message here" />
+                <span style="align-content: center">
+                    <asp:Button ID="btnShare" runat="server" Class="btn btn-success" Text="Share" OnClick="btnShare_Click" />
+                </span>
+                <asp:DataList ID="dlMessage" runat="server">
+                    <ItemTemplate>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <asp:Image ID="ShareImage" runat="server" ImageUrl="http://www.aspforums.net/Avatars/IndiaRush.jpg"
+                                                   Height="60px" Width="50px" />
+                                    </a>
+                                </td>
+                                <td style="width: 200px">
+                                    <asp:Label ID="Label1" Text='<%#Eval("Name") %>' runat="server" />
+                                    </h4>
+                                    <br />
+                                    <asp:Label ID="Label2" Text='<%# Eval("Comment")%>' runat="server" />
+                                    <br />
+                                    <asp:Label ID="txtDate" Text='<%#Eval("CreateDate")%>' runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </ItemTemplate>
+                </asp:DataList>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+        -->
+    <!-- end of comment section -->
+</div>
 
 
 
