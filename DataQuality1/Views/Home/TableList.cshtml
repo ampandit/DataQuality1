@@ -3,6 +3,82 @@
     ViewBag.Title = "TableList";
 }
 @using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+
 <h2>Directory of Tables</h2>
 
+<div class="mainContentBody">
+    <div class="row">
+        <div class="col resultContainer">
+            <div class="row">
+
+ 
+            </div>
+            <div id="resultBox">
+                @*table item starts*@
+                @*foreach (var result in Model)*@
+                @for (int i=1; i<=10; i++)
+                {
+                    <div class="row justify-content-start">
+                        <div class="col-4">
+                            @*{ var cbId = "cb_" + result.Id;}*@
+                            <label class="custom-control custom-checkbox">
+                                <!--<input type="checkbox" class="custom-control-input" id="@*cbId*@">
+    <label class="custom-control-label headerText" for="@*cbId*@">  @*result.Name*@</label> -->
+                                <input type="checkbox" class="custom-control-input" id="i">
+    <label class="custom-control-label headerText" for="i"> tablename @*result.Name*@</label>
+                            </label>
+                        </div>
+                        <div class="col-2 iconLock"><span id="totalFields">29</span> Fields </div>
+
+                        <div class="col-6">
+                            <div class="row justify-content-end">
+                                <div class="col-2 text-center verticalDividerAfter detailTab">
+                                    <button class="btn iconOverview">quality</button>
+                                </div>
+                                <div class="col-2 text-center detailTab">
+                                    <button class="btn iconCart">popularity</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-11" id="resultDescription">
+                            @*result.BusinessDescription*@
+                            Description Here <br />
+                            <a href="/Shared/Reviews">Comment/Review</a>
+                        </div>
+                    </div>
+                    <hr />
+                }
+            </div>
+
+            @*table item ends*@
+        </div>
+
+
+    </div>
+
+<!--  @*Pagination row*@
+    <div class="row">
+        <div class="col text-right">
+       @*if (Model.TotalItemCount > CommonConstants.PageSizeForResults)
+           {
+                @Html.PagedListPager(Model, page => Url.Action("Search",
+                             new { searchText = ViewBag.SearchKeyword, page }))
+            }
+           *@
+        </div>
+    </div> -->
+
+
+</div>
+<script>
+    require(["home"],
+        function (init) {
+            init.initializeForResults();
+        });
+</script>
 
