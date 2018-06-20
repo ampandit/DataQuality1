@@ -15,21 +15,21 @@
         <div class="col resultContainer">
             <div class="row">
 
- 
+
             </div>
             <div id="resultBox">
                 @*table item starts*@
                 @*foreach (var result in Model)*@
-                @for (int i=1; i<=10; i++)
+                @for (int i = 1; i <= 10; i++)
                 {
                     <div class="row justify-content-start">
                         <div class="col-4">
                             @*{ var cbId = "cb_" + result.Id;}*@
                             <label class="custom-control custom-checkbox">
                                 <!--<input type="checkbox" class="custom-control-input" id="@*cbId*@">
-    <label class="custom-control-label headerText" for="@*cbId*@">  @*result.Name*@</label> -->
+                                <label class="custom-control-label headerText" for="@*cbId*@">  @*result.Name*@</label> -->
                                 <input type="checkbox" class="custom-control-input" id="i">
-    <label class="custom-control-label headerText" for="i"> tablename @*result.Name*@</label>
+                                <label class="custom-control-label headerText" for="i"> tablename @*result.Name*@</label>
                             </label>
                         </div>
                         <div class="col-2 iconLock"><span id="totalFields">29</span> Fields </div>
@@ -62,17 +62,17 @@
 
     </div>
 
-<!--  @*Pagination row*@
-    <div class="row">
-        <div class="col text-right">
-       @*if (Model.TotalItemCount > CommonConstants.PageSizeForResults)
-           {
-                @Html.PagedListPager(Model, page => Url.Action("Search",
-                             new { searchText = ViewBag.SearchKeyword, page }))
-            }
-           *@
-        </div>
-    </div> -->
+    <!--  @*Pagination row*@
+        <div class="row">
+            <div class="col text-right">
+           @*if (Model.TotalItemCount > CommonConstants.PageSizeForResults)
+               {
+                    @Html.PagedListPager(Model, page => Url.Action("Search",
+                                 new { searchText = ViewBag.SearchKeyword, page }))
+                }
+               *@
+            </div>
+        </div> -->
 
 
 </div>
