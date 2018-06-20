@@ -19,7 +19,8 @@ h1 {
 /****** Style Star Rating Widget *****/
 
 .ratingform {
-    margin-left:100px;
+    margin-left:104px;
+
 }
 
 
@@ -63,14 +64,6 @@ h1 {
     margin-left:364px;
 }
 
-/*
-.rating {
-    border:none;
-    float:left;
-    position:relative;
-    padding-right:10px;
-}
-*/
 
 #rating1 {
     border: none;
@@ -90,28 +83,8 @@ h1 {
     position: relative;
     padding-right: 10px;
 }
-/*
-    .rating > input {
-        display: none;
-    }
 
-    .rating > label:before {
-        margin: 5px;
-        font-size: 1.50em;
-        font-family: FontAwesome;
-        display: inline-block;
-        content: "\f005";
-    }
 
-    .rating > .half:before {
-        content: "\f089";
-        position: absolute;
-    }
-
-    .rating > label {
-        color: #ddd;
-        float: right;
-    } */
 
 
     /* RATING 1 */
@@ -185,19 +158,6 @@ h1 {
     /***** CSS Magic to Highlight Stars on Hover *****/
     
 
-        .rating > input:checked ~ label, /* show gold star when clicked */
-        .rating:not(:checked) > label:hover, /* hover current star */
-        .rating:not(:checked) > label:hover ~ label {
-            color: #0faf65;
-        }
-            /* hover previous stars in list */
-
-            .rating > input:checked + label:hover, /* hover current star when changing rating */
-            .rating > input:checked ~ label:hover,
-            .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-            .rating > input:checked ~ label:hover ~ label {
-                color: #0faf65;
-            }
 
 /* RATING 1 */
 
@@ -252,4 +212,23 @@ h1 {
     margin-top: -150px;
     border-left: solid 1px #808080;
     margin-bottom:30px;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+#ratingnum {
+    text-align:center;
+    color:white;
+    position:absolute;
+    top:41.5%;
+    left:50%;
+    transform: translate(-50%,50%);
 }
