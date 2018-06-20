@@ -216,10 +216,7 @@ h1 {
 
 hr {
     display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.5em 0.5em auto auto;
     border-style: inset;
     border-width: 1px;
 } 
@@ -228,7 +225,7 @@ hr {
     text-align:center;
     color:white;
     position:absolute;
-    top:41.5%;
+    top:40.5%;
     left:50%;
     transform: translate(-50%,50%);
 }

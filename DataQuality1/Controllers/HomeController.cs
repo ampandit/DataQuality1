@@ -41,8 +41,12 @@ namespace DataQuality1.Controllers
             // dynamic jObj = JsonConvert.DeserializeObject(json);
             foreach (JProperty res in o1.Properties())
             {
-                Console.WriteLine(res.Name);
+                //Console.WriteLine(res.Name);
             }
+
+            // TODO: implement data quality calculation - make threshold for testing
+            
+
             return View();
         }
 

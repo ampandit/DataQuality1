@@ -11,17 +11,28 @@
 
 <!-- TODO: ADD SUMMARY RATING STAR -->
 
+@*if (there are no reviews)*@
+<!-- display NR star -->
 <div style="font-size:3.5em; color:gray; text-align:center; opacity:0.25">
     <i class="fas fa-star"></i>
 </div>
 
 <div id="ratingnum">
-    @*if (there are no reviews)*@
-    <!-- display NR star -->
     NR
-    @*else*@
-    <!--display star with current rating-->
 </div>
+
+@*else*@
+<!--display star with current rating-->
+<!--
+    <div style="font-size:3.5em; color:#0faf65; text-align:center; opacity:0.85">
+        <i class="fas fa-star"></i>
+    </div>
+
+    <div id="ratingnum">
+        
+    </div>
+
+-->
 
 <br /><br />
 
