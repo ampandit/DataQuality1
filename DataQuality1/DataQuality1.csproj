@@ -155,6 +155,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CommonConstants.cs" />
+    <Compile Include="Controllers\EntitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +205,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\TableList.cshtml" />
     <Content Include="Views\Home\Reviews.cshtml" />
+    <Content Include="Views\Entities\Create.cshtml" />
+    <Content Include="Views\Entities\Delete.cshtml" />
+    <Content Include="Views\Entities\Details.cshtml" />
+    <Content Include="Views\Entities\Edit.cshtml" />
+    <Content Include="Views\Entities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
